@@ -1,3 +1,5 @@
+YUI.add('moodle-atto_morefontcolors-button', function (Y, NAME) {
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -23,8 +25,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-YUI.add('moodle-atto_morefontcolors-button', function (Y, NAME) {
-
 /**
  * @module moodle-atto_morefontcolors-button
  */
@@ -37,18 +37,29 @@ YUI.add('moodle-atto_morefontcolors-button', function (Y, NAME) {
  * @extends M.editor_atto.EditorPlugin
  */
 
+
 Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor_atto.EditorPlugin, [], {
     initializer: function() {
         var items = [];
         var colors = this.get('colors');
-        Y.Array.each(colors, function(color) {
-            items.push({
-                text: '<div style="width: 20px; height: 20px; border: 1px solid #CCC; background-color: ' +
+        Y.Array.each(colors, function(colors) {
+            if (colors.trim()) {
+                var color_array = colors.split(/\s+/);
+                var stringOfDiv = "";
+                for (var i = 0; i < color_array.length; i++) {
+                    var color = color_array[i].trim();
+                    if (/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color)) {
+                        stringOfDiv = stringOfDiv +
+                        '<div style="width: 20px; margin-right: 5px; height: 20px; border: 1px solid #CCC; background-color: ' +
                         color +
-                        '"></div>',
-                callbackArgs: color,
-                callback: this._changeStyle
-            });
+                        '" data-color="' + color + '"></div>';
+                    }
+                }
+                items.push({
+                    text: stringOfDiv,
+                    callback: this._changeStyle
+                });
+            }
         });
 
         this.addToolbarMenu({
@@ -70,9 +81,9 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
      * @param {string} color The new font color
      * @private
      */
-    _changeStyle: function(e, color) {
+    _changeStyle: function (e) {
         this.get('host').formatSelectionInlineStyle({
-            color: color
+            color: e.target.getAttribute("data-color")
         });
     }
 }, {

@@ -32,11 +32,5 @@ function atto_morefontcolors_params_for_js($elementid, $options, $fpoptions) {
     // Pass the number of visible groups as a param.
     $availablecolors = get_config('atto_morefontcolors', 'availablecolors');
     $possiblecolors = explode("\n", (str_replace("\r", '', $availablecolors)));
-    $colors = array();
-    foreach($possiblecolors as $color) {
-        if (preg_match('/^#?([0-9a-fA-F]{3})|([0-9a-fA-F]{6})$/', $color, $matches)) {
-            $colors[] = $color;
-        }
-    }
-    return array('colors' => $colors);
+    return array('colors' => $possiblecolors);
 }

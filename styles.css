@@ -1,3 +1,7 @@
 .atto_morefontcolors_button .dropdown-menu {
     min-width: inherit;
 }
+
+.atto_menuentry a[role="menuitem"]{
+    display: flex;
+}
