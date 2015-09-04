@@ -2,6 +2,9 @@
     min-width: inherit;
 }
 
+.atto_menuentry {
+    list-style-type: none;
+}
 .atto_menuentry a[role="menuitem"]{
     display: flex;
 }
