@@ -56,6 +56,7 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
             overlayWidth: '4',
             menuColor: '#333333',
             globalItemConfig: {
+                inlineFormat: true,
                 callback: this._changeStyle
             },
             items: items
