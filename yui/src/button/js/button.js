@@ -35,7 +35,6 @@
  * @extends M.editor_atto.EditorPlugin
  */
 
-
 Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor_atto.EditorPlugin, [], {
     initializer: function() {
         var items = [];
@@ -73,5 +72,18 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
         this.get('host').formatSelectionInlineStyle({
             color: color
         });
+    }
+}, {
+    ATTRS: {
+        /**
+         * The list of available colors
+         *
+         * @attribute colors
+         * @type array
+         * @default {}
+         */
+        colors: {
+            value: {}
+        }
     }
 });

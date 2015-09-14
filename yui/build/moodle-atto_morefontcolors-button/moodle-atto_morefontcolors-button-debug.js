@@ -1,3 +1,5 @@
+YUI.add('moodle-atto_morefontcolors-button', function (Y, NAME) {
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -22,8 +24,6 @@
  * @author     Rossiani Wijaya  <rwijaya@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-YUI.add('moodle-atto_morefontcolors-button', function (Y, NAME) {
 
 /**
  * @module moodle-atto_morefontcolors-button
