@@ -39,4 +39,10 @@ if ($ADMIN->fulltree) {
 #333333';
     $setting = new admin_setting_configtextarea('atto_morefontcolors/availablecolors', $name, $desc, $default);
     $settings->add($setting);
+
+    $name = new lang_string ('setting_custom', 'atto_morefontcolors');
+    $desc = new lang_string ('setting_custom_desc', 'atto_morefontcolors');
+    $default = 0;
+    $setting = new admin_setting_configcheckbox ('atto_morefontcolors/allowcustom', $name, $desc, $default);
+    $settings->add ($setting);
 }

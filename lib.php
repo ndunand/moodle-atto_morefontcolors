@@ -38,5 +38,26 @@ function atto_morefontcolors_params_for_js($elementid, $options, $fpoptions) {
             $colors[] = $color;
         }
     }
-    return array('colors' => $colors);
+    $allowcustom = get_config ('atto_morefontcolors', 'allowcustom');
+    return array(
+        'colors' => $colors,
+        'allowcustom' => $allowcustom
+    );
+}
+
+/**
+ * Initialise the js strings required for this module.
+ */
+function atto_morefontcolors_strings_for_js() {
+    global $PAGE;
+
+    $PAGE->requires->strings_for_js(array('custom',
+                                          'customcolor',
+                                          'submit',
+                                          'rgb',
+                                          'hsl',
+                                          'hexadecimal',
+                                          'saturation',
+                                          'luminance'),
+                                    'atto_morefontcolors');
 }
