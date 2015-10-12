@@ -107,6 +107,7 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
             overlayWidth: '4',
             menuColor: '#333333',
             globalItemConfig: {
+                inlineFormat: true,
                 callback: this._changeStyle
             },
             items: items
@@ -290,5 +291,18 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
 
         updatePickerUI();
     });
+    }
+}, {
+    ATTRS: {
+        /**
+         * The list of available colors
+         *
+         * @attribute colors
+         * @type array
+         * @default {}
+         */
+        colors: {
+            value: {}
+        }
     }
 });
