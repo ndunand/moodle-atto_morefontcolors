@@ -24,14 +24,14 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'More font colours';
-$string['availablecolors'] = 'Available colours';
-$string['availablecolors_desc'] = 'You may define available colours by listing them here, one hexcode per line. Note that changing these values only affects the appearance of the Font Color menu but does not affect existing texts.';
-$string['customcolor'] = 'Custom font colour';
+$string['pluginname'] = 'More font colors';
+$string['availablecolors'] = 'Available colors';
+$string['availablecolors_desc'] = 'You may define available colors by listing them here, one hexcode per line. Note that changing these values only affects the appearance of the Font Color menu but does not affect existing texts.';
+$string['customcolor'] = 'Custom font color';
 $string['submit'] = 'Submit';
-$string['custom'] = 'Custom font colour (in hex)';
-$string['setting_custom'] = 'Allow custom colour';
-$string['setting_custom_desc'] = 'Allow the users to enter a custom font colour in hex';
+$string['custom'] = 'Custom font color (in hex)';
+$string['setting_custom'] = 'Allow custom color';
+$string['setting_custom_desc'] = 'Allow the users to enter a custom font color in hex';
 $string['hsl'] = 'HSL:';
 $string['rgb'] = 'RGB:';
 $string['hexadecimal'] = 'Hexadecimal:';
