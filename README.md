@@ -2,6 +2,14 @@
 
 Modification of the fontcolor plugin allowing the Moodle admin to define colors
 
+
+## New in version 1.2 (2015101200)
+
+ - you can now have several rows of colors, not just one single column : in the plugin settings, just enter several space-separated hex color codes per line -- thanks to Abu Zakaria!
+
+ - if allowed in the plugin settings, users can now use a color wheel to set their own colors -- thanks to jinhofer
+
+
 ## Installation
 
 Install the plugin directory as usual in lib/editor/atto/plugins.
