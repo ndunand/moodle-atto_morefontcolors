@@ -68,3 +68,13 @@
     font-weight: bold;
     display: block;
 }
+
+.atto_menuentry {
+    list-style-type: none;
+}
+
+.atto_menuentry a[role="menuitem"]{
+    display: flex;
+    display: -webkit-flex;
+}
+

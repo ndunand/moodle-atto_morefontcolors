@@ -88,14 +88,25 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
 
     initializer: function(config) {
         var items = [];
-        Y.Array.each(config.colors, function(color) {
-            items.push({
-                text: '<div style="width: 20px; height: 20px; border: 1px solid #CCC; background-color: ' +
+        var colors = this.get('colors');
+        Y.Array.each(colors, function(colors) {
+            if (colors.trim()) {
+                var color_array = colors.split(/\s+/);
+                var stringOfDiv = "";
+                for (var i = 0; i < color_array.length; i++) {
+                    var color = color_array[i].trim();
+                    if (/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color)) {
+                        stringOfDiv = stringOfDiv +
+                        '<div style="width: 20px; margin-right: 5px; height: 20px; border: 1px solid #CCC; background-color: ' +
                         color +
-                        '"></div>',
-                callbackArgs: color,
-                callback: this._changeStyle
-            });
+                        '" data-color="' + color + '"></div>';
+                    }
+                }
+                items.push({
+                    text: stringOfDiv,
+                    callback: this._changeStyle
+                });
+            }
         });
         if (config.allowcustom === '1') {
             items.push({
@@ -129,7 +140,7 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
             this._customColor();
         } else {
             this.get('host').formatSelectionInlineStyle({
-                color: color
+                color: e.target.getAttribute("data-color")
             });
         }
     },
@@ -293,6 +304,19 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
 
         updatePickerUI();
     });
+    }
+}, {
+    ATTRS: {
+        /**
+         * The list of available colors
+         *
+         * @attribute colors
+         * @type array
+         * @default {}
+         */
+        colors: {
+            value: {}
+        }
     }
 }, {
     ATTRS: {
