@@ -26,14 +26,15 @@
 
 $string['pluginname'] = 'More font colors';
 $string['availablecolors'] = 'Available colors';
-$string['availablecolors_desc'] = 'You may define available colors by listing them here, one hexcode per line. Note that changing these values only affects the appearance of the Font Color menu but does not affect existing texts.';
+$string['availablecolors_desc'] = 'You may define available colors by listing them here, as you want them displayed in the font color drop-down menu. If you want to display a 4x4 matrix of colors, enter 4 lines of 4 hex color codes, separared by spaces.<br><br>Note that changing these values only affects the appearance of the Font Color menu but does not affect existing colored texts.';
 $string['customcolor'] = 'Custom font color';
 $string['submit'] = 'Submit';
 $string['custom'] = 'Custom font color (in hex)';
 $string['setting_custom'] = 'Allow custom color';
-$string['setting_custom_desc'] = 'Allow the users to enter a custom font color in hex';
+$string['setting_custom_desc'] = 'Allow the users to chose a custom color by using a color picker';
 $string['hsl'] = 'HSL:';
 $string['rgb'] = 'RGB:';
 $string['hexadecimal'] = 'Hexadecimal:';
 $string['saturation'] = 'Saturation: ';
 $string['luminance'] = 'Luminance: ';
+
