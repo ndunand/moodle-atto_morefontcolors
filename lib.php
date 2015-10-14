@@ -18,7 +18,7 @@
  * Atto text editor integration version file.
  *
  * @package    atto_morefontcolors
- * @copyright  2014 Université de Lausanne
+ * @copyright  2014-2015 Université de Lausanne
  * @author     Nicolas Dunand <nicolas.dunand@unil.ch>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -61,3 +61,4 @@ function atto_morefontcolors_strings_for_js() {
                                           'luminance'),
                                     'atto_morefontcolors');
 }
+
