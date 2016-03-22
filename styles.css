@@ -69,11 +69,11 @@
     display: block;
 }
 
-.atto_menuentry {
+.atto_morefontcolors_button .atto_menuentry {
     list-style-type: none;
 }
 
-.atto_menuentry a[role="menuitem"]{
+.atto_morefontcolors_button .atto_menuentry a[role="menuitem"]{
     display: flex;
     display: -webkit-flex;
 }
