@@ -37,4 +37,5 @@ $string['rgb'] = 'RGB:';
 $string['hexadecimal'] = 'Hexadecimal:';
 $string['saturation'] = 'Saturation: ';
 $string['luminance'] = 'Luminance: ';
+$string['privacy:metadata'] = 'The atto_morefontcolors plugin does not store any personal data.';
 
