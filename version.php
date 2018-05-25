@@ -26,9 +26,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2018050200;
+$plugin->version   = 2018050201;
 $plugin->requires  = 2014050800;
 $plugin->component = 'atto_morefontcolors';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.2.7 for Moodle 2.7-3.5 (build 2018050200)';
+$plugin->release = '1.2.8 for Moodle 2.7-3.5 (build 2018050201)';
 
