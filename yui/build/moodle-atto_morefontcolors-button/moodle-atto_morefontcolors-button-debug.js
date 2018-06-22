@@ -37,14 +37,15 @@ YUI.add('moodle-atto_morefontcolors-button', function (Y, NAME) {
  * @extends M.editor_atto.EditorPlugin
  */
 
-
 var TEMPLATE = '' +
     '<form id="atto_morefontcolors_dialogue">' +
         '<div class="picker">' +
             '<div id="atto_morefontcolors_dialogue_hue-dial"></div>' +
             '<div class="sliders">' +
-                '<div id="atto_morefontcolors_dialogue_sat-slider"><strong>{{get_string "saturation" component}}<span></span></strong></div>' +
-                '<div id="atto_morefontcolors_dialogue_lum-slider"><strong>{{get_string "luminance" component}}<span></span></strong></div>' +
+                '<div id="atto_morefontcolors_dialogue_sat-slider">' +
+    '<strong>{{get_string "saturation" component}}<span></span></strong></div>' +
+                '<div id="atto_morefontcolors_dialogue_lum-slider">' +
+    '<strong>{{get_string "luminance" component}}<span></span></strong></div>' +
             '</div>' +
             '<div class="color"></div>' +
         '</div>' +
@@ -177,7 +178,7 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
                 focusAfterHide: null
             }).hide();
 
-            var color = Y.one('#atto_morefontcolors_dialogue_rgb-output').get('value');
+            var color = Y.one('#' + dialogue.get('id') +' #atto_morefontcolors_dialogue_rgb-output').get('value');
 
             this.get('host').setSelection(this._currentSelection);
 
@@ -194,34 +195,36 @@ Y.namespace('M.atto_morefontcolors').Button = Y.Base.create('button', Y.M.editor
      * @private
      */
     _initiateColorPicker: function() {
+        var elementid = this.getDialogue().get('id'),
+            dialogueselector = '#' + elementid + ' #atto_morefontcolors_dialogue';
         YUI().use('dial', 'slider', 'event-valuechange', 'color', function (Y) {
-            Y.one('#atto_morefontcolors_dialogue .picker').addClass('yui3-skin-sam');
+            Y.one(dialogueselector + ' .picker').addClass('yui3-skin-sam');
             var hue = new Y.Dial({
                 min: 0,
                 max: 360,
                 stepsPerRevolution: 360,
                 continuous: true,
                 centerButtonDiameter: 0.4,
-                render: '#atto_morefontcolors_dialogue_hue-dial'
+                render: dialogueselector + ' #atto_morefontcolors_dialogue_hue-dial'
             }),
             sat = new Y.Slider({
                 min: 0,
                 max: 100,
                 value: 100,
-                render: '#atto_morefontcolors_dialogue_sat-slider'
+                render: dialogueselector + ' #atto_morefontcolors_dialogue_sat-slider'
             }),
             lum = new Y.Slider({
                 min: 0,
                 max: 100,
                 value: 50,
-                render: '#atto_morefontcolors_dialogue_lum-slider'
+                render: dialogueselector + ' #atto_morefontcolors_dialogue_lum-slider'
             }),
-            satValue = Y.one('#atto_morefontcolors_dialogue #atto_morefontcolors_dialogue_sat-slider span'),
-            lumValue = Y.one('#atto_morefontcolors_dialogue #atto_morefontcolors_dialogue_lum-slider span'),
-            color = Y.one('#atto_morefontcolors_dialogue .color'),
-            hexOutput = Y.one('#atto_morefontcolors_dialogue #atto_morefontcolors_dialogue_hex-output'),
-            rgbOutput = Y.one('#atto_morefontcolors_dialogue #atto_morefontcolors_dialogue_rgb-output'),
-            hslOutput = Y.one('#atto_morefontcolors_dialogue #atto_morefontcolors_dialogue_hsl-output'),
+            satValue = Y.one(dialogueselector + ' #atto_morefontcolors_dialogue_sat-slider span'),
+            lumValue = Y.one(dialogueselector + ' #atto_morefontcolors_dialogue_lum-slider span'),
+            color = Y.one(dialogueselector + ' .color'),
+            hexOutput = Y.one(dialogueselector + ' #atto_morefontcolors_dialogue_hex-output'),
+            rgbOutput = Y.one(dialogueselector + ' #atto_morefontcolors_dialogue_rgb-output'),
+            hslOutput = Y.one(dialogueselector + ' #atto_morefontcolors_dialogue_hsl-output'),
             focused = null,
             setFocused = function(e) {
                 focused = e.currentTarget;
