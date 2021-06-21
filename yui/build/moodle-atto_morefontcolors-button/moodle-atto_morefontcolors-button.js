@@ -19,7 +19,7 @@ YUI.add('moodle-atto_morefontcolors-button', function (Y, NAME) {
  * Atto text editor integration version file.
  *
  * @package    atto_morefontcolors
- * @copyright  2014 Université de Lausanne
+ * @copyright  2014-2021 Université de Lausanne
  * @author     Nicolas Dunand <nicolas.dunand@unil.ch>
  * @author     Rossiani Wijaya  <rwijaya@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

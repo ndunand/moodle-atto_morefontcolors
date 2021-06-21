@@ -17,7 +17,7 @@
  * Atto text editor integration version file.
  *
  * @package    atto_morefontcolors
- * @copyright  2014-2015 Université de Lausanne
+ * @copyright  2014-2021 Université de Lausanne
  * @author     Nicolas Dunand <nicolas.dunand@unil.ch>
  * @author     Rossiani Wijaya  <rwijaya@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
