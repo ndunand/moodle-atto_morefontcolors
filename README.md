@@ -1,21 +1,19 @@
 # More font colors for Atto
 
-Modification of the fontcolor plugin allowing the Moodle admin to define colors
+Modification of the fontcolor plugin allowing the Moodle admin to define colors.
 
 
-## New in version 1.2 (2015101200)
+You can have several rows of colors, not just one single column : in the plugin settings, just enter several space-separated hex color codes per line -- thanks to Abu Zakaria!
 
- - you can now have several rows of colors, not just one single column : in the plugin settings, just enter several space-separated hex color codes per line -- thanks to Abu Zakaria!
-
- - if allowed in the plugin settings, users can now use a color wheel to set their own colors -- thanks to jinhofer
+If allowed in the plugin settings, users can now use a color wheel to set their own colors -- thanks to jinhofer
 
 
 ## Installation
 
-Install the plugin directory as usual in lib/editor/atto/plugins.
+1. Install the plugin directory in `lib/editor/atto/plugins`.
 
-Then visit Site Administration > Plugins > Atto > More font colors to define the colors you want your users to be able to chose from.
+2. In Site Administration > Plugins > Atto > More font colors, you can define the colors you want your users to be able to chose from and other options.
 
-Finally, enable the plugin by adding 'morefontcolors' (without the quotes) in the Atto toolbar settings.
+3. To make the button available in the Atto HTML editor, enable the plugin by adding `morefontcolors` in the Atto toolbar settings.
 
 
