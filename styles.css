@@ -69,6 +69,10 @@
     display: block;
 }
 
+#atto_morefontcolors_dialogue .yui3-dial-label-string {
+    display: none;
+}
+
 .atto_morefontcolors_button .atto_menuentry {
     list-style-type: none;
 }
