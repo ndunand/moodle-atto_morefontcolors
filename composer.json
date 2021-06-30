@@ -1,0 +1,10 @@
+{
+    "name": "ndunand/moodle-atto_morefontcolors",
+    "type": "moodle-atto",
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "morefontcolors"
+    }
+}
