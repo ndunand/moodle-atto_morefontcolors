@@ -29,4 +29,3 @@ Feature: Atto more font colours button
     When I click on "//div[@data-color='#123456']" "xpath_element"
     And I press "Update profile"
     Then "//span[normalize-space(.)='Water lillies' and contains(@style, '18,52,86')]" "xpath_element" should exist
-
